@@ -3,8 +3,7 @@
  *
  * @example
  * ```typescript
- * type Characters = ExtractCharacters<"Hello">;
- * // "H" | "e" | "l" | "l" | "o"
+ * ExtractCharacters<"Hello">; // "H" | "e" | "l" | "l" | "o"
  * ```
  */
 export type ExtractCharacters<T extends string> = T extends `${infer Left}${infer Right}`
@@ -16,8 +15,8 @@ export type ExtractCharacters<T extends string> = T extends `${infer Left}${infe
  * Check if a string only includes characters from a given string
  * @example
  * ```typescript
- * IsPhoneNumber<"Hello", "0123456789-()">; // false
- * IsPhoneNumber<"123-456-7890", "0123456789-()">; // true
+ * StringOnlyIncludes<"Hello", "0123456789-()">; // false
+ * StringOnlyIncludes<"123-456-7890", "0123456789-()">; // true
  * ```
  */
 export type StringOnlyIncludes<T extends string, Allowed extends string> = ExtractCharacters<T> extends ExtractCharacters<Allowed>
@@ -33,4 +32,4 @@ export type StringOnlyIncludes<T extends string, Allowed extends string> = Extra
  * IsAlphaNumeric<"$^1fa">; // false
  * ```
  */
- export type IsAlphanumeric<T extends string> = OnlyIncludes<Lowercase<T>, 'abcdefghijklmnopqrstuvwxyz0123456789-_'>
+ export type IsAlphanumeric<T extends string> = StringOnlyIncludes<Lowercase<T>, 'abcdefghijklmnopqrstuvwxyz0123456789-_'>
