@@ -20,7 +20,7 @@ export type ExtractCharacters<T extends string> = T extends `${infer Left}${infe
  * IsPhoneNumber<"123-456-7890", "0123456789-()">; // true
  * ```
  */
-export type OnlyIncludes<T extends string, Allowed extends string> = ExtractCharacters<T> extends ExtractCharacters<Allowed>
+export type StringOnlyIncludes<T extends string, Allowed extends string> = ExtractCharacters<T> extends ExtractCharacters<Allowed>
     ? true
     : false;
 
