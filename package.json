@@ -1,6 +1,6 @@
 {
   "name": "@devonpmack/ts-utils",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Helpful typescript type utilities",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -15,7 +15,7 @@
     "build": "tsc -p tsconfig.json",
     "prepare": "yarn build && yarn build-readme && git add . && npm version patch -f",
     "build-readme": "echo '# ts-utils' > README.md && python3 build_docs.py src/types.ts >> README.md && python3 build_docs.py src/functions.ts >> README.md",
-    "postpack": "ggp"
+    "postpack": "zsh -c ggp"
   },
   "author": "Devon Mack",
   "license": "MIT",
