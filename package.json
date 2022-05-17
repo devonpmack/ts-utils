@@ -1,0 +1,16 @@
+{
+  "name": "@devonpmack/ts-utils",
+  "version": "1.0.0",
+  "description": "Helpful typescript type utilities",
+  "main": "index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devonpmack/ts-utils.git"
+  },
+  "author": "Devon Mack",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/devonpmack/ts-utils/issues"
+  },
+  "homepage": "https://github.com/devonpmack/ts-utils#readme"
+}
