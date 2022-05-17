@@ -6,10 +6,12 @@
  * ExtractCharacters<"Hello">; // "H" | "e" | "l" | "l" | "o"
  * ```
  */
-export type ExtractCharacters<T extends string> =
-  T extends `${infer Left}${infer Right}` ? Left | ExtractCharacters<Right> : T;
+export type ExtractCharacters<T extends string> = Exclude<ExtractCharactersRecursive<T>, ''>
 
-/**
+type ExtractCharactersRecursive<T extends string> =
+  T extends `${infer Left}${infer Right}` ? Left | ExtractCharactersRecursive<Right> : T;
+
+  /**
  * Check if a string only includes characters from a given string
  * @example
  * ```typescript
