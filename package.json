@@ -14,7 +14,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "build-readme": "echo '# ts-utils' > README.md && python3 build_docs.py src/types.ts >> README.md && python3 build_docs.py src/functions.ts >> README.md",
-    "publish": "npm version patch && yarn build && yarn build-docs && npm publish"
+    "publish": "yarn build && yarn build-docs && npm version patch && npm publish"
   },
   "author": "Devon Mack",
   "license": "MIT",
