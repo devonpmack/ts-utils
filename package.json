@@ -1,6 +1,6 @@
 {
   "name": "@devonpmack/ts-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Helpful typescript type utilities",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -12,7 +12,9 @@
     "url": "git+https://github.com/devonpmack/ts-utils.git"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json",
+    "build-readme": "echo '# ts-utils' > README.md && python3 build_docs.py src/types.ts >> README.md && python3 build_docs.py src/functions.ts >> README.md",
+    "publish": "npm version && yarn build && yarn build-docs && npm publish"
   },
   "author": "Devon Mack",
   "license": "MIT",
@@ -22,5 +24,8 @@
   "homepage": "https://github.com/devonpmack/ts-utils#readme",
   "dependencies": {
     "typescript": "next"
+  },
+  "devDependencies": {
+    "ts-node": "^10.7.0"
   }
 }
