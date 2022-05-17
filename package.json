@@ -4,6 +4,9 @@
   "description": "Helpful typescript type utilities",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/devonpmack/ts-utils.git"
