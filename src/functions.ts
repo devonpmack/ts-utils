@@ -7,7 +7,7 @@
  * typeof keys[0]; // "a" | "b"
  * ```
  */
-export function keysOf<T, TKeys extends Extract<keyof T, string>[]>(
+export function keysOf<T extends object, TKeys extends Extract<keyof T, string>[]>(
   obj: T
 ): TKeys {
   return Object.keys(obj) as TKeys;

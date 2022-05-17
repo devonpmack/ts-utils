@@ -2,15 +2,22 @@
   "name": "@devonpmack/ts-utils",
   "version": "1.0.0",
   "description": "Helpful typescript type utilities",
-  "main": "index.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/devonpmack/ts-utils.git"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
   },
   "author": "Devon Mack",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/devonpmack/ts-utils/issues"
   },
-  "homepage": "https://github.com/devonpmack/ts-utils#readme"
+  "homepage": "https://github.com/devonpmack/ts-utils#readme",
+  "dependencies": {
+    "typescript": "next"
+  }
 }
